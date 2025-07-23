@@ -12,3 +12,23 @@ const employees = [
 ];
 
 export default employees;
+
+export function base() {
+  return "Hello employees!";
+}
+
+export function getEmployees() {
+  return employees;
+}
+
+export function getEmployeesById(id) {
+  const employee = employees.find((e) => e.id === +id);
+
+  return employee;
+}
+
+export function getEmployeeByRandom() {
+  const randomIndex = Math.floor(Math.random() * employees.length);
+
+  return employees[randomIndex];
+}
